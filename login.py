@@ -52,9 +52,11 @@ nam.bind("<FocusOut>",on_leave)
 
 def on_enter(e):
     usern.delete(0,'end')
+    usern.config(show='*')
 def on_leave(e):
     if usern.get()=='':
         usern.insert(0,'Password')
+        usern.config(show='')
 usern=Entry(frame,width=25,fg='black',border=0,bg='lightcyan',font=('Microsoft Yahei UI Light',11))
 usern.place(x=30,y=170)
 usern.insert(0,'Password')
